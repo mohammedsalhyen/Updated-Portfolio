@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { fetchExperiences } from "../utils/data"
-import { Experience } from '../types';
-import Heading from './ui/Heading';
-const Timeline = () => {
-    const [timeLine, setTimeLine] = useState<Experience[]>([]);
-    useEffect(() => {
-        const loadSkills = async () => {
 
-            const fetchedExperiences = await fetchExperiences();
-            setTimeLine(fetchedExperiences);
-        }
-        loadSkills();
-    }, [])
+import Heading from './ui/Heading';
+import { experience } from '../constant';
+const Timeline = () => {
+
     const pargraph = "Here you can see my experience history, each step is supply me with a big amount of knowledge "
     return (
         <div>
@@ -20,7 +11,7 @@ const Timeline = () => {
                     <Heading title="My" span='Experience' p={pargraph} />
                 </div>
                 <div className='padding-container main-prop'>
-                    {timeLine?.map((item: any, index: number) => (
+                    {experience?.map((item: any, index: number) => (
                         <div
                             className={`flex justify-center w-full  relative ${index % 2 === 0 ? "felx-row" : "flex-row-reverse"}`} key={index}
                         >

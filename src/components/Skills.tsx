@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react'
+
 import Heading from './ui/Heading'
-import { SkillType } from '../types'
-import { fetchSkills } from '../utils/data'
+
+import { skills } from '../constant'
 
 const Skills = () => {
     const pargraph="I've worked with a variety of technologies in the web development world. Here's an overview of my technical skills and expertise."
   
-  const [skills, setSkills] = useState<SkillType[]>([]);
-  useEffect(() => {
-    const loadSkills = async () => {
-       
-        const fetchedSkills = await fetchSkills();
-        setSkills(fetchedSkills);
-    }
-    loadSkills();
-  }, [])
+
   
     return (
     <section className=' main-prop padding-container' id='skills'>
