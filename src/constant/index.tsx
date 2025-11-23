@@ -56,7 +56,7 @@ export const projects = [
     img: "https://res.cloudinary.com/dw8tg6qif/image/upload/v1738583727/Screenshot_3-2-2025_135456_tabibe.netlify.app_pg6zpg.jpg",
     description:
       "Sehaty-tech is a medical website using it you can ask and communicate with any doctor you choice with one click",
-    link: "https://sahtik.com/",
+    link: "https://sahtik.mmpro.ly/",
     skills: ["React js", "TypeScript", "Tailwind", "React-aos"],
   },
   {
